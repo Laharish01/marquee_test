@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 // import App from './App';
-import AddCompany from './add_company';
+import AddCompany from './AddCompany';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ViewCompany from './ViewCompany';
