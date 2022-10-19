@@ -6,5 +6,5 @@ marquee_test
 Database configuration can be set in backend/database/queries.js
 
 # Table - companies:
-cin VARCHAR PRIMARY KEY
+cin VARCHAR PRIMARY KEY,
 name VARCHAR 
