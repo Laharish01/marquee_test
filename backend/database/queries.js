@@ -1,15 +1,16 @@
 const Pool = require('pg').Pool
 require('dotenv').config()
-const connString = process.env.DATABASE_URL
-console.log(connString);
-const dbUser = {
 
-}
 const pool = new Pool({
-  connString
+  user: process.env.PG_USER,
+  host: process.env.PG_HOST,
+  password: process.env.PG_PASSWORD,
+  database: process.env.PG_DATABASE,
+  port: 5432,
+  ssl: {
+    rejectUnauthorized: false
+  }
 })
-
-console.log(pool)
 
 const getCompanies = (req, res) => {
   pool.query('SELECT * FROM companies', (error, results) => {
