@@ -32,7 +32,7 @@ class AddCompany extends React.Component {
         var searchBox = document.getElementById('form1')
         searchBox.value = el.innerHTML
         this.setState({
-            selectedCompany: this.state.companies.find(o => o.name == searchBox.value)
+            selectedCompany: this.state.companies.find(o => o.name === searchBox.value)
         })
         
     }
@@ -47,7 +47,7 @@ class AddCompany extends React.Component {
         var reqString = "search=" + searchText + "&filter=company";
 
         (async () => {
-            const rawResponse = await fetch('http://localhost:4200/companies/search', {
+            const rawResponse = await fetch('https://marquee-test-app.herokuapp.com/companies/search', {
               method: 'POST',
               headers: {
                 'Accept': 'application/json',
@@ -68,7 +68,7 @@ class AddCompany extends React.Component {
 
         //get value of search and to add company to db
         (async () => {
-            const rawResponse = await fetch("http://localhost:4200/companies", {
+            const rawResponse = await fetch("https://marquee-test-app.herokuapp.com/companies", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
