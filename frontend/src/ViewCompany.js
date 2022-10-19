@@ -9,7 +9,7 @@ class ViewCompany extends React.Component {
 
     }
     componentDidMount() {
-        fetch('http://localhost:4200/companies')
+        fetch('https://marquee-test-app.herokuapp.com/companies')
             .then(response => response.json())
             .then(records => {
                 this.setState({
